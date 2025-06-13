@@ -4,13 +4,13 @@ FROM node:lts-alpine AS builder
 
 WORKDIR /app
 
-COPY ./website-frontend/package*.json .
-COPY ./website-frontend/pnpm-lock.yaml .
+COPY ./package*.json .
+COPY ./pnpm-lock.yaml .
 
 RUN npm i -g pnpm
 RUN npm install
 
-COPY ./website-frontend/ .
+COPY . .
 
 RUN npm run build
 RUN npm prune --prod
