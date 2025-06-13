@@ -14,6 +14,7 @@ It is heavily inspired by and lifts some items from [BastiDood's own template](h
 - Using `adapter-node` instead of `adapter-static` in the [SvelteKit config](./svelte.config.js)
 - Removing the full-on `pnpm build` step in the [CI workflow](./.github/workflows/ci.yaml)
 - Implementing a full deployment flow using [Docker](./Dockerfile)
+- Coming out of the box with [pino](https://github.com/pinojs) logging
 
 Aside from this, there are a few minor changes, such as:
 
