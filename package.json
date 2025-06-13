@@ -4,14 +4,15 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "vite",
 		"build": "vite build",
+		"prepare": "svelte-kit sync",
 		"preview": "vite preview",
-		"prepare": "svelte-kit sync || echo ''",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"format": "prettier --write .",
-		"lint": "prettier --check . && eslint ."
+		"fmt": "prettier --check .",
+		"fmt:fix": "prettier --write .",
+		"lint": "pnpm run --parallel /lint:/",
+		"lint:eslint": "eslint",
+		"lint:svelte": "svelte-check --tsconfig ./tsconfig.json"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
