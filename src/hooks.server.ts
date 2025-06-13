@@ -1,9 +1,9 @@
-import { PinoPretty, type PrettyStream } from 'pino-pretty';
-import { pino } from 'pino';
 import { AssertionError } from 'assert';
+import { pino } from 'pino';
+import { PinoPretty as pretty } from 'pino-pretty';
 
 // keep pretty transport always
-const stream: PrettyStream = PinoPretty();
+const stream = pretty();
 const logger = pino(stream);
 
 logger.info('system started');
