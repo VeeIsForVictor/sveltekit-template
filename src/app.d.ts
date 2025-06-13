@@ -1,6 +1,6 @@
 // See https://svelte.dev/docs/kit/types#app.d.ts
 
-import type { Logger } from "pino";
+import type { Logger } from 'pino';
 
 // for information about these interfaces
 declare global {
