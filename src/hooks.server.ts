@@ -3,7 +3,7 @@ import { pino } from 'pino';
 import { AssertionError } from 'assert';
 
 // keep pretty transport always
-let stream: PrettyStream = PinoPretty();
+const stream: PrettyStream = PinoPretty();
 const logger = pino(stream);
 
 logger.info('system started');
