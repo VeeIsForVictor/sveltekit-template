@@ -1,15 +1,19 @@
 {
-	"useTabs": true,
+	"useTabs": false,
+	"arrowParens": "avoid",
+	"tabWidth": 4,
 	"singleQuote": true,
-	"trailingComma": "none",
 	"printWidth": 100,
+	"trailingComma": "all",
 	"plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
 	"overrides": [
+		{ "files": ["tsconfig.json", "jsconfig.json"], "options": { "parser": "jsonc" } },
 		{
-			"files": "*.svelte",
-			"options": {
-				"parser": "svelte"
-			}
+		"files": "*.svelte",
+		"options": {
+			"parser": "svelte",
+			"svelteAllowShorthand": true
+		}
 		}
 	]
 }
